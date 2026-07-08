@@ -30,6 +30,7 @@ class SoundShader_InvMove_Generic : SoundShader_Inv_Base
         {"CRDTN_Sounds\Data\sounds\Items\inv_items_generic_3", 1},
         {"CRDTN_Sounds\Data\sounds\Items\inv_items_generic_4", 1},
         {"CRDTN_Sounds\Data\sounds\Items\inv_items_generic_5", 1},
+        {"CRDTN_Sounds\Data\sounds\Items\inv_items_generic_6", 1}
     };
 };
 
@@ -101,7 +102,7 @@ class SoundShader_InvMove_Pills : SoundShader_Inv_Base
 {
     samples[] = {
         {"CRDTN_Sounds\Data\sounds\Items\inv_items_pills_1", 1},
-        {"CRDTN_Sounds\Data\sounds\Items\inv_items_pills_2", 1},
+        {"CRDTN_Sounds\Data\sounds\Items\inv_items_pills_2", 1}
     };
 };
 
@@ -112,6 +113,7 @@ class SoundShader_InvMove_Bottle : SoundShader_Inv_Base
         {"CRDTN_Sounds\Data\sounds\Items\inv_items_bottle_2", 1},
         {"CRDTN_Sounds\Data\sounds\Items\inv_items_bottle_3", 1},
         {"CRDTN_Sounds\Data\sounds\Items\inv_items_bottle_4", 1},
+        {"CRDTN_Sounds\Data\sounds\Items\inv_items_bottle_4", 1}
     };
 };
 
@@ -123,8 +125,8 @@ class SoundShader_InvMove_Wpn : SoundShader_Inv_Base
 {
     samples[] = {
         {"CRDTN_Sounds\Data\sounds\Items\inv_items_wpn_1", 1},
-        {"CRDTN_Sounds\Data\sounds\Items\inv_items_wpn_2", 1},
-        {"CRDTN_Sounds\Data\sounds\weapons\generic_holster", 1}};
+        {"CRDTN_Sounds\Data\sounds\Items\inv_items_wpn_2", 1}
+    };
 };
 
 class SoundShader_InvMove_Grenade : SoundShader_Inv_Base

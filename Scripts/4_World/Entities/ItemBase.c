@@ -23,19 +23,13 @@ modded class ItemBase
 
         if (GetGame().GetPlayer() && vector.Distance(GetPosition(), GetGame().GetPlayer().GetPosition()) > 15)
         {
-			return;
-		}
+            return;
+        }
 
-        SEffectManager.PlaySoundOnObject(InventorySoundsets.GetSoundSet(this), GetGame().GetPlayer());
-
-        // Previous implementation - not sure if it's better or worse
-        // string soundset = InventorySoundsets.GetSoundSet(this);
-        // sound = SEffectManager.CreateSound(soundset, GetGame().GetPlayer());
-        // if (!sound)
-        // {
-        //     return;
-        // }
-        // sound.SetSoundAutodestroy(true);
-        // sound.SoundPlay();
+        PlayerBase player = PlayerBase.Cast(GetHierarchyRootPlayer());
+        if (player == GetGame().GetPlayer())
+        {
+            SEffectManager.PlaySoundOnObject(InventorySoundsets.GetSoundSet(this), GetGame().GetPlayer());
+        }
     }
 };

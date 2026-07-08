@@ -16,7 +16,7 @@ class InventorySoundsets
 
     static string GetSoundSet(ItemBase item)
     {
-        if(!item)
+        if (!item)
         {
             return "";
         }
@@ -36,20 +36,26 @@ class InventorySoundsets
             return SOUNDSET_PILLS;
         }
 
-        if (item.IsAmmoPile() || item.IsMagazine())
+        if (item.IsAmmoPile())
         {
             return SOUNDSET_AMMOSOUND;
         }
+
+        // if (item.IsMagazine())
+        // {
+        //     return SOUNDSET_GENERIC;
+        // }
 
         if (item.IsWeapon())
         {
             return SOUNDSET_WPN;
         }
 
-        if (item.IsInherited(Bottle_Base) || item.IsLiquidContainer())
+        if (item.IsInherited(Bottle_Base) || item.IsLiquidContainer() || item.IsInherited(SSURV_Drink_Base))
         {
             return SOUNDSET_BOTTLE;
         }
+      
 
         if (item.IsExplosive())
         {
@@ -71,10 +77,20 @@ class InventorySoundsets
             return SOUNDSET_PILLS;
         }
 
-        if (item.IsAnyInherited(CRDTN_ItemTypes.CONSTRUCTION))
+        if (item.IsMoney())
         {
-            return SOUNDSET_BIGITEM;
+            if (item.IsInherited(SSURV_Money_Coin))
+            {
+                return SOUNDSET_COIN;
+            }
+
+            return SOUNDSET_PAPER;
         }
+
+        // if (item.IsAnyInherited(CRDTN_ItemTypes.CONSTRUCTION))
+        // {
+        //     return SOUNDSET_BIGITEM;
+        // }
 
         return SOUNDSET_GENERIC;
     }

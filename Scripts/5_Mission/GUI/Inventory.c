@@ -3,19 +3,19 @@ modded class Inventory
     override void OnHide()
     {
         super.OnHide();
-        if (GetGame().IsClient())
-        {
-            PlaySound(CRDTN_SOUND_INV_CLOSE);
-        }
+        // if (GetGame().IsClient())
+        // {
+        //     PlaySound(CRDTN_SOUND_INV_CLOSE);
+        // }
     }
 
     override void OnShow()
     {
         super.OnShow();
-        if (GetGame().IsClient())
-        {
-            PlaySound(CRDTN_SOUND_INV_OPEN);
-        }
+        // if (GetGame().IsClient())
+        // {
+        //     PlaySound(CRDTN_SOUND_INV_OPEN);
+        // }
     }
 
     void PlaySound(string soundset)
