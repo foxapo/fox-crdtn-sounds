@@ -26,8 +26,9 @@ modded class ItemBase
             return;
         }
 
+        // both can be null (optics re-attached while a weapon loads, before the local player exists): null == null
         PlayerBase player = PlayerBase.Cast(GetHierarchyRootPlayer());
-        if (player == GetGame().GetPlayer())
+        if (player && player == GetGame().GetPlayer())
         {
             SEffectManager.PlaySoundOnObject(InventorySoundsets.GetSoundSet(this), GetGame().GetPlayer());
         }
